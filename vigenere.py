@@ -17,15 +17,15 @@ def rotate_character(char, rot):
 def encrypt(text, key):
     key_iterator = 0
     key_list = []
-    char_list = []
+    char_string = ""
     for character in key:
         key_list.append(character)
     for each in text:
         if each.isalpha():
             key_letter = key_list[key_iterator % len(key)]
-            char_list.append(rotate_character(each, alphabet_position(key_letter)))
+            char_string += rotate_character(each, alphabet_position(key_letter))
             key_iterator += 1
-    return char_list
+    return char_string
 
 def main():
     print(encrypt(input("What message would you like to encrypt?"), input("What is your Keyword?")))
