@@ -25,6 +25,8 @@ def encrypt(text, key):
             key_letter = key_list[key_iterator % len(key)]
             char_string += rotate_character(each, alphabet_position(key_letter))
             key_iterator += 1
+        else:
+            char_string += each
     return char_string
 
 def main():
