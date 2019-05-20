@@ -14,7 +14,7 @@ def rotate_character(char, rot):
         character = char
     return character
 
-def vig_encrypt(text, key):
+def encrypt(text, key):
     key_iterator = 0
     key_list = []
     char_list = []
@@ -28,7 +28,7 @@ def vig_encrypt(text, key):
     return char_list
 
 def main():
-    print(vig_encrypt(input("What message would you like to encrypt?"), input("What is your Keyword?")))
+    print(encrypt(input("What message would you like to encrypt?"), input("What is your Keyword?")))
 
 if __name__ == "__main__":
     main()
