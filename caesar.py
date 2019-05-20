@@ -12,7 +12,6 @@ def rotate_character(char, rot):
             character = chr(char_number + ord("A"))
     else:
         character = char
-    print(char_number)
     return character
 
 def encrypt(text, rot):
